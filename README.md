@@ -35,38 +35,46 @@ This will generate two reports under the `output/` directory:
 
 ### Input Structure
 
-The tool reads data from a structured YAML file (`data/experience_data.yaml`). Here's a sample structure:
+The tool reads data from a structured YAML file (`data/experience_data.yaml`). Each job can have multiple projects, and each project can list several technologies with an optional duration in months. If the experience time for a technology is omitted, it defaults to the project's duration.
+
+Here’s a sample structure:
 
 ```yaml
 jobs:
   - job_title: 'Full Stack Developer @ Company XYZ'
     duration: 'Jan 2020 – Dec 2021'
     projects:
-      - name: 'Project A'
+      - name: 'E-commerce Platform Development'
         duration: 12
         technologies:
-          Python: 12
-          Django: 12
-      - name: 'Project B'
+          Python:
+          Django:
+          PostgreSQL:
+          Docker: 8 # Technology-specific duration
+      - name: 'Internal Tooling Project'
         duration: 6
         technologies:
-          React: 6
-          Node.js: 6
+          React:
+          Node.js:
+          Jenkins:
+          Kubernetes: 4 # Technology-specific duration
 
-  - job_title: 'Mid-Level Developer @ ABC Corp'
+  - job_title: 'Senior Developer @ ABC Corp'
     duration: 'Jan 2022 – Present'
     projects:
-      - name: 'Cloud Migration Project'
+      - name: 'Cloud Infrastructure Migration'
         duration: 10
         technologies:
-          AWS: 10
-          Docker: 10
-          Terraform: 10
-      - name: 'API Development'
+          AWS:
+          Terraform:
+          Docker:
+      - name: 'Microservices API Development'
         duration: 8
         technologies:
-          FastAPI: 8
-          Python: 8
+          FastAPI:
+          Python:
+          Kafka:
+          Redis: 5 # Technology-specific duration
 ```
 
 ### Output Example
@@ -76,10 +84,18 @@ jobs:
 ```
 | Technology | Experience Time |
 |------------|-----------------|
+| AWS        | 10 mo           |
+| Docker     | 1 yr 6 mo       |
+| Django     | 1 yr            |
+| FastAPI    | 8 mo            |
+| Kafka      | 8 mo            |
+| Kubernetes | 4 mo            |
+| Node.js    | 6 mo            |
+| PostgreSQL | 1 yr            |
 | Python     | 1 yr 8 mo       |
-| Django     | 1 yr 2 mo       |
 | React      | 6 mo            |
-...
+| Redis      | 5 mo            |
+| Terraform  | 10 mo           |
 ```
 
 #### Experience-Time Sorted:
@@ -88,9 +104,17 @@ jobs:
 | Technology | Experience Time |
 |------------|-----------------|
 | Python     | 1 yr 8 mo       |
-| Django     | 1 yr 2 mo       |
+| Docker     | 1 yr 6 mo       |
+| Django     | 1 yr            |
+| PostgreSQL | 1 yr            |
 | AWS        | 10 mo           |
-...
+| Terraform  | 10 mo           |
+| FastAPI    | 8 mo            |
+| Kafka      | 8 mo            |
+| React      | 6 mo            |
+| Node.js    | 6 mo            |
+| Redis      | 5 mo            |
+| Kubernetes | 4 mo            |
 ```
 
 ## Development Approach
@@ -99,7 +123,7 @@ SkillChrono was developed using a **Test-Driven Development (TDD)** approach to 
 
 - **CodeQueryGPT**: An AI assistant that contributed significantly to the development of this project. CodeQueryGPT assisted in feature development, testing, debugging, and helped streamline the documentation process. It provided real-time code analysis, suggestions for refactoring, and helped ensure that good coding practices were maintained throughout the project.
 
-- **CodeQueryAPI**: A Python API for querying project structures and content in real-time. You can explore the **CodeQueryAPI** repository [here](https://github.com/YourRepo/CodeQueryAPI).
+- **CodeQueryAPI**: A Python API for querying project structures and content in real-time. You can explore the **CodeQueryAPI** repository [here](https://github.com/danfmaia/CodeQuery-API).
 
 ## Contributing
 
