@@ -14,6 +14,6 @@ def parse_input(file_path):
                 all_projects.extend(job_entry['projects'])
 
     # Debugging: Print collected projects
-    print("Collected projects:", all_projects)
+    # print("Collected projects:", all_projects)
 
     return {'projects': all_projects}

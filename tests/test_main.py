@@ -2,7 +2,7 @@ from unittest.mock import mock_open, patch
 import unittest
 from src.input_parser import parse_input
 from src.experience_aggregator import aggregate_experience
-from src.markdown_generator import generate_markdown
+from src.markdown_manager import generate_markdown
 
 
 class TestExperienceAggregator(unittest.TestCase):

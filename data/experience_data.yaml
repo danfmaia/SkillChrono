@@ -89,6 +89,7 @@ jobs:
           NestJS:
           React Native:
           TypeScript:
+          Next.js: 3
           # Cloud/DevOps
           AWS:
 

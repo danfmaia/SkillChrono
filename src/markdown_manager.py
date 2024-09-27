@@ -1,5 +1,9 @@
 def generate_markdown(experience_dict, sort_by_time=False):
     md_content = "### Total Skill Experience:\n\n"
+    
+    # Table header
+    md_content += "| Technology | Experience Time |\n"
+    md_content += "|------------|-----------------|\n"
 
     # Helper function to convert months to "Y yr m mo" format
     def format_duration(months):
@@ -13,14 +17,14 @@ def generate_markdown(experience_dict, sort_by_time=False):
         return result.strip()
 
     # Sort the technologies based on the chosen method (alphabetically or by time)
-    sorted_items = sorted(experience_dict.items(
-    ), key=lambda item: item[1], reverse=True) if sort_by_time else sorted(experience_dict.items())
+    sorted_items = sorted(experience_dict.items(), key=lambda item: item[1], reverse=True) if sort_by_time else sorted(experience_dict.items())
 
-    # Format the markdown content
+    # Format the markdown content into a table
     for tech, months in sorted_items:
-        md_content += f"- **{tech}**: {format_duration(months)}\n"
+        md_content += f"| {tech} | {format_duration(months)} |\n"
 
     return md_content
+
 
 
 def save_markdown(md_content, output_file):
