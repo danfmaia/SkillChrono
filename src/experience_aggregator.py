@@ -1,4 +1,13 @@
 def aggregate_experience(projects):
+    """
+    Aggregates experience for each technology across multiple projects.
+
+    Args:
+        projects (list): A list of projects, each containing technologies and their durations.
+
+    Returns:
+        dict: A dictionary mapping technologies to the total number of months of experience.
+    """
     experience_dict = {}
 
     for project in projects:

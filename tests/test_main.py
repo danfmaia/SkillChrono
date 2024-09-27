@@ -2,7 +2,7 @@ from unittest.mock import mock_open, patch
 import unittest
 from src.input_parser import parse_input
 from src.experience_aggregator import aggregate_experience
-from src.markdown_manager import generate_markdown
+from src.markdown_manager import generate_markdown, save_markdown
 
 
 class TestExperienceAggregator(unittest.TestCase):
@@ -89,8 +89,71 @@ class TestExperienceAggregator(unittest.TestCase):
     def test_generate_markdown(self):
         experience_dict = {'Python': 9, 'Flask': 3, 'FastAPI': 6}
         md_content = generate_markdown(experience_dict)
-        expected_md = "### Total Skill Experience:\n\n- **FastAPI**: 6 mo\n- **Flask**: 3 mo\n- **Python**: 9 mo\n"
-        self.assertEqual(md_content, expected_md)
+
+        # Update the expected markdown without strict spacing
+        expected_md = (
+            "### Total Skill Experience:\n\n"
+            "| Technology | Experience Time |\n"
+            "|------------|-----------------|\n"
+            "| FastAPI    | 6 mo |\n"
+            "| Flask      | 3 mo |\n"
+            "| Python     | 9 mo |\n"
+        )
+
+        # Normalize whitespace to focus on content
+        self.assertEqual("".join(md_content.split()),
+                         "".join(expected_md.split()))
+
+    def test_generate_markdown_alphabetical(self):
+        experience_dict = {'Python': 9, 'Flask': 3, 'FastAPI': 6}
+        md_content = generate_markdown(experience_dict, sort_by_time=False)
+
+        expected_md = (
+            "### Total Skill Experience:\n\n"
+            "| Technology | Experience Time |\n"
+            "|------------|-----------------|\n"
+            "| FastAPI    | 6 mo |\n"
+            "| Flask      | 3 mo |\n"
+            "| Python     | 9 mo |\n"
+        )
+        self.assertEqual("".join(md_content.split()),
+                         "".join(expected_md.split()))
+
+    def test_generate_markdown_by_time(self):
+        experience_dict = {'Python': 9, 'Flask': 3, 'FastAPI': 6}
+        md_content = generate_markdown(experience_dict, sort_by_time=True)
+
+        expected_md = (
+            "### Total Skill Experience:\n\n"
+            "| Technology | Experience Time |\n"
+            "|------------|-----------------|\n"
+            "| Python     | 9 mo |\n"
+            "| FastAPI    | 6 mo |\n"
+            "| Flask      | 3 mo |\n"
+        )
+        self.assertEqual("".join(md_content.split()),
+                         "".join(expected_md.split()))
+
+    def test_generate_markdown_empty(self):
+        experience_dict = {}
+        md_content = generate_markdown(experience_dict)
+
+        expected_md = (
+            "### Total Skill Experience:\n\n"
+            "| Technology | Experience Time |\n"
+            "|------------|-----------------|\n"
+        )
+        self.assertEqual("".join(md_content.split()),
+                         "".join(expected_md.split()))
+
+    def test_save_markdown(self):
+        # Mock content and file saving
+        mock_md_content = "### Total Skill Experience:\n\n| Technology | Experience Time |\n|------------|-----------------|\n| Python | 9 mo |\n"
+        with patch('builtins.open', mock_open()) as mocked_file:
+            save_markdown(mock_md_content, 'output/test_skills.md')
+            mocked_file.assert_called_once_with(
+                'output/test_skills.md', 'w', encoding='utf-8')
+            mocked_file().write.assert_called_once_with(mock_md_content)
 
 
 if __name__ == '__main__':

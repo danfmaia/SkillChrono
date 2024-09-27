@@ -2,6 +2,15 @@ import yaml
 
 
 def parse_input(file_path):
+    """
+    Parses the YAML input file and returns the project data.
+
+    Args:
+        file_path (str): Path to the YAML file.
+
+    Returns:
+        dict: Dictionary containing a list of all projects with their respective technologies and durations.
+    """
     with open(file_path, 'r', encoding='utf-8') as f:
         data = yaml.safe_load(f)  # Parse the single YAML document
 

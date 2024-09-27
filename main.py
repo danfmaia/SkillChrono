@@ -4,6 +4,9 @@ from src.markdown_manager import generate_markdown, save_markdown
 
 
 def main():
+    """
+    Main function to parse input, aggregate experience, and generate markdown reports.
+    """
     # Step 1: Parse the input data
     print("Parsing input data from 'data/experience_data.yaml'...")
     data = parse_input('data/experience_data.yaml')
