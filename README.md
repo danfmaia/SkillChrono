@@ -47,6 +47,26 @@ jobs:
         technologies:
           Python: 12
           Django: 12
+      - name: 'Project B'
+        duration: 6
+        technologies:
+          React: 6
+          Node.js: 6
+
+  - job_title: 'Mid-Level Developer @ ABC Corp'
+    duration: 'Jan 2022 – Present'
+    projects:
+      - name: 'Cloud Migration Project'
+        duration: 10
+        technologies:
+          AWS: 10
+          Docker: 10
+          Terraform: 10
+      - name: 'API Development'
+        duration: 8
+        technologies:
+          FastAPI: 8
+          Python: 8
 ```
 
 ### Output Example
@@ -56,8 +76,10 @@ jobs:
 ```
 | Technology | Experience Time |
 |------------|-----------------|
-| Python     | 1 yr 2 mo       |
+| Python     | 1 yr 8 mo       |
 | Django     | 1 yr 2 mo       |
+| React      | 6 mo            |
+...
 ```
 
 #### Experience-Time Sorted:
@@ -65,9 +87,19 @@ jobs:
 ```
 | Technology | Experience Time |
 |------------|-----------------|
-| Python     | 1 yr 2 mo       |
+| Python     | 1 yr 8 mo       |
 | Django     | 1 yr 2 mo       |
+| AWS        | 10 mo           |
+...
 ```
+
+## Development Approach
+
+SkillChrono was developed using a **Test-Driven Development (TDD)** approach to ensure code reliability and functionality. Additionally, the project was built with the assistance of AI tools such as **CodeQueryGPT** and **CodeQueryAPI**.
+
+- **CodeQueryGPT**: An AI assistant that contributed significantly to the development of this project. CodeQueryGPT assisted in feature development, testing, debugging, and helped streamline the documentation process. It provided real-time code analysis, suggestions for refactoring, and helped ensure that good coding practices were maintained throughout the project.
+
+- **CodeQueryAPI**: A Python API for querying project structures and content in real-time. You can explore the **CodeQueryAPI** repository [here](https://github.com/YourRepo/CodeQueryAPI).
 
 ## Contributing
 
