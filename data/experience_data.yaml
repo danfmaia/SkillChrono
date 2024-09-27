@@ -1,0 +1,234 @@
+jobs:
+  - job_title: 'Junior Full Stack Developer @ Radix Engineering & Software'
+    duration: 'May 2019 – Oct 2020'
+    projects:
+      - name: 'Development Project for US-based Oil and Gas Company'
+        duration: 9
+        technologies:
+          # Dev
+          Full Stack Dev:
+          Full Stack Dev (Back-End Focused):
+          C#.NET:
+          Angular:
+      - name: 'Improvements & Software Support Project'
+        duration: 9
+        technologies:
+          # Dev
+          Full Stack Dev:
+          Full Stack Dev (Back-End Focused):
+          TypeScript:
+          Angular:
+          C#.NET:
+          Documentation:
+          # DB
+          SQL Server:
+          # Cloud/DevOps
+          MS Azure:
+          # Other
+          Jira:
+      - name: 'Software Support Project'
+        duration: 4
+        technologies:
+          # Dev
+          Full Stack Dev:
+          Full Stack Dev (Back-End Focused):
+          C#.NET:
+          # DB
+          Oracle DB:
+
+  - job_title: 'Full Stack Developer @ Bora App'
+    duration: 'Nov 2020 – Mar 2021'
+    projects:
+      - name: 'Bora App – Conception and Prototyping'
+        duration: 5
+        technologies:
+          # Dev
+          Full Stack Dev:
+          Full Stack Dev (Front-End Focused):
+          Cross-Platform Dev:
+          TypeScript:
+          React Native:
+          C#.NET:
+          Documentation:
+          # DB/DM
+          Postgres:
+          # Cloud/DevOps
+          AWS:
+          Docker:
+          # Other
+
+  - job_title: 'Mid-Level Full Stack Developer @ Rei do Pitaco'
+    duration: 'Dec 2021 – Aug 2022'
+    projects:
+      - name: 'Rei do Pitaco App – Feature Leadership'
+        duration: 9
+        technologies:
+          # Dev
+          Full Stack Dev:
+          Full Stack Dev (Front-End Focused):
+          Mobile Dev:
+          Cross-Platform Dev:
+          React Native:
+          Flutter/Dart:
+          Kotlin:
+          Swift:
+          TypeScript:
+          Node.js:
+          NestJS:
+
+  - job_title: 'Junior Full Stack Developer @ Rei do Pitaco'
+    duration: 'May 2021 – Dec 2021'
+    projects:
+      - name: 'Rei do Pitaco App – App Leadership'
+        duration: 8
+        technologies:
+          # Dev
+          Full Stack Dev:
+          Full Stack Dev (Front-End Focused):
+          Cross-Platform Dev:
+          NestJS:
+          React Native:
+          TypeScript:
+          # Cloud/DevOps
+          AWS:
+
+  - job_title: 'Full Stack Developer @ HaxRugby'
+    duration: 'Jun 2022 – Dec 2022'
+    projects:
+      - name: 'Rei do Pitaco App – App Leadership'
+        duration: 6
+        technologies:
+          # Dev
+          Full Stack Dev:
+          Full Stack Dev (Front-End Focused):
+          Game Dev:
+          TypeScript:
+          InversifyJS:
+          # Cloud/DevOps
+          AWS:
+
+  - job_title: 'Mid-Level Flutter Developer @ 4Code'
+    duration: 'Dec 2022 – Jul 2023'
+    projects:
+      - name: 'Ituran Digital App – Rewrite in Flutter'
+        duration: 8
+        technologies:
+          # Dev
+          Full Stack Dev (Front-End Focused):
+          Cross-Platform Dev:
+          Flutter/Dart:
+          Clean Architecture:
+          TDD:
+          # Productivity
+          AI-Assisted Dev:
+          ChatGPT:
+          GitHub Copilot:
+          CodeGPT:
+
+  - job_title: 'Creator & Full Stack Developer @ EwD Project'
+    duration: 'Jul 2023 – Aug 2024'
+    projects:
+      - name: 'Mobile App'
+        duration: 1
+        technologies:
+          # Dev
+          Full Stack Dev:
+          Full Stack Dev (Front-End Focused):
+          Mobile Dev:
+          Cross-Platform Dev:
+          Python:
+          Flutter/Dart:
+          BLoC:
+          Documentation:
+          # Productivity
+          GenAI:
+          AI-Assisted Dev:
+          ChatGPT:
+          Custom GPTs:
+          # ML/GenAI
+          RAG:
+          LangChain:
+          NLP:
+          # Cloud/DevOps
+          IaC:
+          Terraform:
+
+      - name: 'Website'
+        duration: 3
+        technologies:
+          # Dev
+          Full Stack Dev:
+          Full Stack Dev (Front-End Focused):
+          Python:
+          HTML/CSS:
+          TypeScript:
+          React:
+          Next.js:
+          MkDocs:
+          Documentation:
+          # Productivity
+          GenAI:
+          AI-Assisted Dev:
+          ChatGPT:
+          Custom GPTs:
+          # Cloud/DevOps
+          Vercel:
+
+      - name: 'NLP Tools (IDP API and Lexicon CLI)'
+        duration: 3
+        technologies:
+          # Dev
+          Full Stack Dev:
+          Full Stack Dev (Back-End Focused):
+          Python:
+          Flask:
+          Documentation:
+          TDD:
+          # Productivity
+          GenAI:
+          AI-Assisted Dev:
+          ChatGPT:
+          Custom GPTs:
+          # ML/GenAI
+          NLP:
+          # DB/DM
+
+      - name: 'Conception'
+        duration: 7
+        technologies:
+          # Dev
+          Documentation:
+          # Productivity
+          GenAI:
+          ChatGPT:
+          # Other
+          Research:
+
+  - job_title: 'Python/GenAI Developer @ CodeQuery API'
+    duration: 'Sep 2024 – current'
+    projects:
+      - name: 'CodeQuery API Development'
+        duration: 1
+        technologies:
+          # Dev
+          Full Stack Dev:
+          Full Stack Dev (Back-End Focused):
+          Python:
+          Flask:
+          FastAPI:
+          Documentation:
+          TDD:
+          # Productivity
+          GenAI:
+          AI-Assisted Dev:
+          ChatGPT:
+          Custom GPTs:
+          CodeQueryGPT:
+          # ML/GenAI
+          RAG:
+          LangChain:
+          # DB/DM
+          # Cloud/DevOps
+          AWS:
+          IaC:
+          Terraform:

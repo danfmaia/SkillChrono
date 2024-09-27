@@ -1,0 +1,47 @@
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environments
+env/
+venv/
+.venv/
+env.bak/
+venv.bak/
+
+# Ignore Conda environment directories
+conda-meta/
+*.conda
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore specific OS files
+.DS_Store
+Thumbs.db
+
+# Ignore log and output files
+*.log
+*.out
+*.err
+
+# Ignore compiled Python files
+*.so
+*.dll
+*.dylib
+
+# Ignore package manager lock files
+Pipfile.lock
+poetry.lock
+
+# Ignore IDE/editor project settings
+.vscode/
+.idea/
+
+# Ignore the environment.yml or requirements.txt file, if not needed
+# Uncomment if these should not be committed
+# environment.yml
+# requirements.txt
+
+# Custom
+tests/results.txt
