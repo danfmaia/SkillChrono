@@ -89,6 +89,7 @@ jobs:
           NestJS:
           React Native:
           TypeScript:
+          React: 3
           Next.js: 3
           # Cloud/DevOps
           AWS:
@@ -176,7 +177,7 @@ jobs:
           Vercel:
 
       - name: 'NLP Tools (IDP API and Lexicon CLI)'
-        duration: 3
+        duration: 4
         technologies:
           # Dev
           Full Stack Dev:
@@ -209,7 +210,7 @@ jobs:
     duration: 'Sep 2024 – current'
     projects:
       - name: 'CodeQuery API Development'
-        duration: 1
+        duration: 2
         technologies:
           # Dev
           Full Stack Dev:
